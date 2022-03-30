@@ -1,7 +1,8 @@
 const express = require("express")
 const {
     registerUser, 
-    loginUser, logout, 
+    loginUser, 
+    logout, 
     forgotPassword, 
     resetPassword, 
     getUserDetails, 
@@ -10,9 +11,11 @@ const {
     getAllUser,
     getSingleUser,
     updateUserRole,
-    deleteUser} = require("../controllers/userControllers")
+    deleteUser
+      } = require("../controllers/userControllers")
 
 const {isAuthenticatedUser, authorizeRoles} = require("../middleware/auth")
+
 const router = express.Router()
 
 router.route("/register").post(registerUser)

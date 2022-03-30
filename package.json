@@ -1,25 +1,38 @@
 {
   "name": "ecommerce",
   "version": "1.0.0",
-  "description": "",
-  "main": "ECOMMERCE/server.js",
+  "description": "Hi! My name is **Karim**, I have created this tutorial to learn MERN Stack",
+  "main": "api/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api/server.js",
-    "dev": "nodemon api/server.js"
+    "dev": "nodemon api/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.2",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.26.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.7",
-    "nodemailer": "^6.7.3",
-    "nodemon": "^2.0.15",
-    "validator": "^13.7.0"
-  }
+    "mongoose": "^5.13.5",
+    "nodemailer": "^6.6.3",
+    "stripe": "^8.174.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimsultanov/ecommerce.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/karimsultanov/ecommerce/issues"
+  },
+  "homepage": "https://github.com/karimsultanov/ecommerce#readme"
 }
